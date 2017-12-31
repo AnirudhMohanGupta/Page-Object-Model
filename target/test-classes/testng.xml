@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="FirstTestSuite" verbose="1">
+
+	<listeners>
+		<listener class-name="com.csd.ExtentReportListener.ExtentReportNG" />
+	</listeners>
+
+	<test name="CSD Automation Test Cases">
+		<classes>
+			<class name="com.csd.AssociateLoginPageTest" />
+		</classes>
+	</test>
+
+</suite>
