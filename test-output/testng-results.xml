@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19353" started-at="2018-01-01T10:27:46Z" finished-at="2018-01-01T10:28:05Z">
+  <suite name="Default suite" duration-ms="40264" started-at="2018-01-02T10:31:03Z" finished-at="2018-01-02T10:31:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19353" started-at="2018-01-01T10:27:46Z" finished-at="2018-01-01T10:28:05Z">
-      <class name="com.csd.CSDHomePageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.csd.CSDHomePageTest@28d25987]" name="setup" is-config="true" duration-ms="18574" started-at="2018-01-01T15:57:46Z" finished-at="2018-01-01T15:58:05Z">
+    <test name="Default test" duration-ms="40264" started-at="2018-01-02T10:31:03Z" finished-at="2018-01-02T10:31:43Z">
+      <class name="com.csd.CSDContractsPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.csd.CSDContractsPageTest@28d25987]" name="setup" is-config="true" duration-ms="19721" started-at="2018-01-02T16:01:03Z" finished-at="2018-01-02T16:01:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verifyHomePageTitleTest()[pri:0, instance:com.csd.CSDHomePageTest@28d25987]" name="verifyHomePageTitleTest" duration-ms="47" started-at="2018-01-01T15:58:05Z" finished-at="2018-01-01T15:58:05Z">
+        <test-method status="PASS" signature="verifyContractsPageLabel()[pri:1, instance:com.csd.CSDContractsPageTest@28d25987]" name="verifyContractsPageLabel" duration-ms="79" started-at="2018-01-02T16:01:22Z" finished-at="2018-01-02T16:01:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyHomePageTitleTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.csd.CSDHomePageTest@28d25987]" name="teardown" is-config="true" duration-ms="703" started-at="2018-01-01T15:58:05Z" finished-at="2018-01-01T15:58:05Z">
+        </test-method> <!-- verifyContractsPageLabel -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.csd.CSDContractsPageTest@28d25987]" name="teardown" is-config="true" duration-ms="757" started-at="2018-01-02T16:01:22Z" finished-at="2018-01-02T16:01:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.csd.CSDHomePageTest -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.csd.CSDContractsPageTest@28d25987]" name="setup" is-config="true" duration-ms="18417" started-at="2018-01-02T16:01:23Z" finished-at="2018-01-02T16:01:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="selectContractTest()[pri:2, instance:com.csd.CSDContractsPageTest@28d25987]" name="selectContractTest" duration-ms="570" started-at="2018-01-02T16:01:42Z" finished-at="2018-01-02T16:01:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectContractTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.csd.CSDContractsPageTest@28d25987]" name="teardown" is-config="true" duration-ms="677" started-at="2018-01-02T16:01:42Z" finished-at="2018-01-02T16:01:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.csd.CSDContractsPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

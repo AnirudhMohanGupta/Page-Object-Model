@@ -52,6 +52,10 @@ public class HomePage extends TestBase {
 		return LogOutBtn.isDisplayed();
 	}
 	
+	public boolean verifyPreferencesBtnisDisplayed(){
+		return PreferencesBtn.isDisplayed();
+	}
+	
 	public ClientsPage clickOnClientsLink() {
 		ClientsBtn.click();
 		return new ClientsPage();		
