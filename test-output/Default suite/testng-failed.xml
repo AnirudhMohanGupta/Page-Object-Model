@@ -3,13 +3,13 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.csd.AssociateLoginPageTest">
+      <class name="com.csd.CSDHomePageTest">
         <methods>
           <include name="teardown"/>
-          <include name="associateLoginPageTitleTest"/>
+          <include name="verifyHomePageTitleTest"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.csd.AssociateLoginPageTest -->
+      </class> <!-- com.csd.CSDHomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
