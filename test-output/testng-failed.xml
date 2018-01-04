@@ -5,8 +5,7 @@
     <classes>
       <class name="com.csd.CSDContractsPageTest">
         <methods>
-          <include name="verifyContractsPageLabel"/>
-          <include name="selectContractTest"/>
+          <include name="searchContractTest"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
