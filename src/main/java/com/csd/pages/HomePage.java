@@ -56,6 +56,11 @@ public class HomePage extends TestBase {
 		return PreferencesBtn.isDisplayed();
 	}
 	
+	public PreferencesClients clickOnPreferencesLink() {
+		PreferencesBtn.click();
+		return new PreferencesClients();		
+	}
+	
 	public ClientsPage clickOnClientsLink() {
 		ClientsBtn.click();
 		return new ClientsPage();		

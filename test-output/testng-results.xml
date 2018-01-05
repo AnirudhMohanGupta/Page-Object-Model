@@ -1,61 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="10" passed="10">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25157" started-at="2018-01-03T13:16:48Z" finished-at="2018-01-03T13:17:13Z">
+  <suite name="Default suite" duration-ms="30036" started-at="2018-01-05T12:39:44Z" finished-at="2018-01-05T12:40:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25157" started-at="2018-01-03T13:16:48Z" finished-at="2018-01-03T13:17:13Z">
-      <class name="com.csd.CSDContractsPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.csd.CSDContractsPageTest@4501b7af]" name="setup" is-config="true" duration-ms="19781" started-at="2018-01-03T18:46:48Z" finished-at="2018-01-03T18:47:07Z">
+    <test name="Default test" duration-ms="30036" started-at="2018-01-05T12:39:44Z" finished-at="2018-01-05T12:40:14Z">
+      <class name="com.csd.CSDPreferencesPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.csd.CSDPreferencesPageTest@28d25987]" name="setup" is-config="true" duration-ms="19182" started-at="2018-01-05T18:09:44Z" finished-at="2018-01-05T18:10:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verifyContractsPageLabel()[pri:1, instance:com.csd.CSDContractsPageTest@4501b7af]" name="verifyContractsPageLabel" duration-ms="57" started-at="2018-01-03T18:47:08Z" finished-at="2018-01-03T18:47:08Z">
+        <test-method status="PASS" signature="addPreferencesTest()[pri:0, instance:com.csd.CSDPreferencesPageTest@28d25987]" name="addPreferencesTest" duration-ms="10817" started-at="2018-01-05T18:10:03Z" finished-at="2018-01-05T18:10:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyContractsPageLabel -->
-        <test-method status="PASS" signature="verifyHomePageTitleTest()[pri:1, instance:com.csd.CSDContractsPageTest@4501b7af]" name="verifyHomePageTitleTest" duration-ms="12" started-at="2018-01-03T18:47:08Z" finished-at="2018-01-03T18:47:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyHomePageTitleTest -->
-        <test-method status="PASS" signature="verifySearchBtnTest()[pri:2, instance:com.csd.CSDContractsPageTest@4501b7af]" name="verifySearchBtnTest" duration-ms="38" started-at="2018-01-03T18:47:08Z" finished-at="2018-01-03T18:47:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySearchBtnTest -->
-        <test-method status="PASS" signature="verifyNewBtnTest()[pri:3, instance:com.csd.CSDContractsPageTest@4501b7af]" name="verifyNewBtnTest" duration-ms="51" started-at="2018-01-03T18:47:08Z" finished-at="2018-01-03T18:47:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyNewBtnTest -->
-        <test-method status="PASS" signature="verifyNextPageBtnTest()[pri:4, instance:com.csd.CSDContractsPageTest@4501b7af]" name="verifyNextPageBtnTest" duration-ms="44" started-at="2018-01-03T18:47:08Z" finished-at="2018-01-03T18:47:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyNextPageBtnTest -->
-        <test-method status="PASS" signature="verifySearchFormTextboxTest()[pri:5, instance:com.csd.CSDContractsPageTest@4501b7af]" name="verifySearchFormTextboxTest" duration-ms="45" started-at="2018-01-03T18:47:08Z" finished-at="2018-01-03T18:47:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySearchFormTextboxTest -->
-        <test-method status="PASS" signature="selectContractTest()[pri:6, instance:com.csd.CSDContractsPageTest@4501b7af]" name="selectContractTest" duration-ms="515" started-at="2018-01-03T18:47:08Z" finished-at="2018-01-03T18:47:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- selectContractTest -->
-        <test-method status="PASS" signature="searchContractTest()[pri:7, instance:com.csd.CSDContractsPageTest@4501b7af]" name="searchContractTest" duration-ms="2066" started-at="2018-01-03T18:47:08Z" finished-at="2018-01-03T18:47:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchContractTest -->
-        <test-method status="PASS" signature="clearSearchTest()[pri:8, instance:com.csd.CSDContractsPageTest@4501b7af]" name="clearSearchTest" duration-ms="1289" started-at="2018-01-03T18:47:10Z" finished-at="2018-01-03T18:47:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clearSearchTest -->
-        <test-method status="PASS" signature="clickNextPageBtninContractspageTest()[pri:9, instance:com.csd.CSDContractsPageTest@4501b7af]" name="clickNextPageBtninContractspageTest" duration-ms="1211" started-at="2018-01-03T18:47:12Z" finished-at="2018-01-03T18:47:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickNextPageBtninContractspageTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.csd.CSDContractsPageTest@4501b7af]" name="teardown" is-config="true" duration-ms="0" started-at="2018-01-03T18:47:13Z" finished-at="2018-01-03T18:47:13Z">
+        </test-method> <!-- addPreferencesTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.csd.CSDPreferencesPageTest@28d25987]" name="teardown" is-config="true" duration-ms="0" started-at="2018-01-05T18:10:14Z" finished-at="2018-01-05T18:10:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.csd.CSDContractsPageTest -->
+      </class> <!-- com.csd.CSDPreferencesPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
