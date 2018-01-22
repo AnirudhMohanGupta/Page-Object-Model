@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -77,21 +79,27 @@ public class PreferencesClients extends TestBase {
 	public void enteronCleintSearchForm(String clientName){
 
 		CleintSearchForm.sendKeys(clientName + Keys.ENTER);
-	
+
 
 		try {
-			WebElement autoOptions = driver.findElement(By.xpath("/div/datalist/option"));
+			List<WebElement> list= driver.findElements(By.xpath("//datalist[@class='Autocomplete-options']//option"));
 
-			List<WebElement> optionsToSelect = autoOptions.findElements(By.tagName("option"));
-			for(WebElement option : optionsToSelect){
-				if(option.getText().equals(clientName)) {
-					System.out.println("Trying to select: "+clientName);
-					option.click();
+			System.out.println("total number of suggestions in search box:" +list.size());
+
+			for (int i = 0; i < list.size(); i++) {
+				System.out.println(list.get(i).getAttribute("value"));
+				if(list.get(i).getAttribute("value").contains("CAH_TEST")){
+					Actions action =new Actions(driver);
+					action.moveToElement(list.get(i)).click().perform();
 					break;
 				}
-			}
 
-		} catch (NoSuchElementException e) {
+				//list.get(2).click();
+			}
+		}
+
+
+		catch (NoSuchElementException e) {
 			System.out.println("Exception Occured 1"+e.getStackTrace());
 		}
 		catch (Exception e) {

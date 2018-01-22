@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30036" started-at="2018-01-05T12:39:44Z" finished-at="2018-01-05T12:40:14Z">
+  <suite name="Default suite" duration-ms="24581" started-at="2018-01-19T12:02:47Z" finished-at="2018-01-19T12:03:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30036" started-at="2018-01-05T12:39:44Z" finished-at="2018-01-05T12:40:14Z">
-      <class name="com.csd.CSDPreferencesPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.csd.CSDPreferencesPageTest@28d25987]" name="setup" is-config="true" duration-ms="19182" started-at="2018-01-05T18:09:44Z" finished-at="2018-01-05T18:10:03Z">
+    <test name="Default test" duration-ms="24581" started-at="2018-01-19T12:02:47Z" finished-at="2018-01-19T12:03:12Z">
+      <class name="com.csd.CSDIncidentContractPageTest">
+        <test-method status="FAIL" signature="setup()[pri:0, instance:com.csd.CSDIncidentContractPageTest@28d25987]" name="setup" is-config="true" duration-ms="24513" started-at="2018-01-19T17:32:47Z" finished-at="2018-01-19T17:33:12Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerExceptionat com.csd.pages.IncidentDetailsPage.clickonIncidentsContracts(IncidentDetailsPage.java:38)at com.csd.CSDIncidentContractPageTest.setup(CSDIncidentContractPageTest.java:36)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:451)at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)at org.testng.internal.Invoker.invokeMethod(Invoker.java:516)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="addPreferencesTest()[pri:0, instance:com.csd.CSDPreferencesPageTest@28d25987]" name="addPreferencesTest" duration-ms="10817" started-at="2018-01-05T18:10:03Z" finished-at="2018-01-05T18:10:14Z">
+        <test-method status="SKIP" signature="showIncidentContractsTest()[pri:0, instance:com.csd.CSDIncidentContractPageTest@28d25987]" name="showIncidentContractsTest" duration-ms="0" started-at="2018-01-19T17:33:12Z" finished-at="2018-01-19T17:33:12Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerExceptionat com.csd.pages.IncidentDetailsPage.clickonIncidentsContracts(IncidentDetailsPage.java:38)at com.csd.CSDIncidentContractPageTest.setup(CSDIncidentContractPageTest.java:36)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:451)at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)at org.testng.internal.Invoker.invokeMethod(Invoker.java:516)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addPreferencesTest -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.csd.CSDPreferencesPageTest@28d25987]" name="teardown" is-config="true" duration-ms="0" started-at="2018-01-05T18:10:14Z" finished-at="2018-01-05T18:10:14Z">
+        </test-method> <!-- showIncidentContractsTest -->
+        <test-method status="SKIP" signature="teardown()[pri:0, instance:com.csd.CSDIncidentContractPageTest@28d25987]" name="teardown" is-config="true" duration-ms="0" started-at="2018-01-19T17:33:12Z" finished-at="2018-01-19T17:33:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.csd.CSDPreferencesPageTest -->
+      </class> <!-- com.csd.CSDIncidentContractPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

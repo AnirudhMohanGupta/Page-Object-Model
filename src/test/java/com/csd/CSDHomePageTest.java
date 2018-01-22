@@ -1,5 +1,11 @@
 package com.csd;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -24,6 +30,14 @@ public class CSDHomePageTest extends TestBase {
 		provider = new SelectAProvider();
 		loginpage = new AssociateLoginPage();
 		provider.selectAssociateProvider();
+		
+		WebDriverWait wait = new WebDriverWait(driver, 10);      
+		Alert alert = wait.until(ExpectedConditions.alertIsPresent());     
+		alert.accept();
+		
+
+		//driver.navigate().to("https://ag050484:Cerner06@associates.sandboxcerner.com/accounts/login?returnTo=https%3A%2F%2Fcsd.devcernerops.net%2Fauth%2Fopenid%2Flogin%2Fcomplete%3Freferer%3D%252Flogin");
+	
 		//driver.get("https://ag050484:Cerner06@associates.sandboxcerner.com/accounts/login?returnTo=https%3A%2F%2Fcsd.devcernerops.net%2Fauth%2Fopenid%2Flogin%2Fcomplete%3Freferer%3D%252Flogin");
 		homePage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
 	}
