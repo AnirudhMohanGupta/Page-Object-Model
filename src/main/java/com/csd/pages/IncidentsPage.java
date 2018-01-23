@@ -20,7 +20,7 @@ public class IncidentsPage extends TestBase {
 	@FindBy(xpath="//a[contains (text(),'New')]")
 	WebElement NewBtn;
 
-	@FindBy(xpath="//table/tbody/tr/td/a")
+	@FindBy(xpath="//a[@class='Anchor']")
 	WebElement RunningIncidentBtn;
 
 	@FindBy(xpath="//input[@name='q']")

@@ -1,9 +1,9 @@
 package com.csd.pages;
 
-import java.util.List;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import org.openqa.selenium.support.PageFactory;
 
 import com.csd.base.TestBase;
 
@@ -23,11 +23,23 @@ public class IncidentDetailsPage extends TestBase {
 	@FindBy(xpath="//a[@class='TabsLink TabsLink--active'][contains (text(),'Message')]")
 	WebElement IncidentsMessageTabBtn;
 
-	@FindBy(xpath="//div[@class='CardHeader']")
-	WebElement NameofSubscriptionContract;
+	@FindBy(xpath="//textarea[@class='FormControl']")
+	WebElement IncidentsMessageTextArea;
 
-	@FindBy(xpath="//ul[@class='ListGroup ListGroup--flush']/descendant::div[@class='Subtext']")
-	List<WebElement> ContractsList;
+	@FindBy(xpath="//h1[@class='Content-title']")
+	WebElement IncidentName;
+
+	@FindBy(xpath="//small[@class='Content-subtitle']")
+	WebElement IncidentTimeDetail;
+
+
+
+
+	//Initializing the page objects
+	public IncidentDetailsPage(){
+		PageFactory.initElements(driver, this);
+
+	}
 
 	//Actions
 	public String validateIncidentsDetailsPageTitle(){
@@ -39,27 +51,19 @@ public class IncidentDetailsPage extends TestBase {
 		return new IncidentsContractsListPage();
 	}
 
-	public void validateNameofSubscriptionContract(){
+	public void validateIncidentMessageText(){
+		
+		System.out.println("Messages sent from Incident is: "+IncidentsMessageTextArea.getText());
 
-		NameofSubscriptionContract.getText();	
 	}
 
-	public void viewSubscriptionContractsListImpactedbyIncident(){
-
-
-		// check Subscription's Contracts impacted by Incident
-
-		if (ContractsList.size()>0) {
-
-			System.out.println("Subscription's Contracts impacted by this Incident are "+ ContractsList.size());
-		}
-
-		// get list of contractsList
-
-		for (WebElement webElement : ContractsList) {
-			System.out.println(webElement.getText());
-
-		}
+	public void validateIncidentName(){
+		System.out.println("Incident Name and Time details is: "+IncidentName.getText());
 	}
+
+	public void validateIncidentTimeDetail(){
+		System.out.println(IncidentTimeDetail.getText());
+	}
+
 
 }
