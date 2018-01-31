@@ -1,5 +1,7 @@
 package com.csd;
 
+import java.io.IOException;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,7 +10,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.csd.base.TestBase;
@@ -24,16 +28,14 @@ public class CSDHomePageTest extends TestBase {
 		super();
 	}
 
-	@BeforeMethod
-	public void setup() {
+	@BeforeTest
+	public void setup() throws IOException {
 		intialization();
 		provider = new SelectAProvider();
 		loginpage = new AssociateLoginPage();
 		provider.selectAssociateProvider();
 		
-		WebDriverWait wait = new WebDriverWait(driver, 10);      
-		Alert alert = wait.until(ExpectedConditions.alertIsPresent());     
-		alert.accept();
+		Runtime.getRuntime().exec("C:/Users/AG050484/Desktop/HandleAuthenticationWindow.exe");
 		
 
 		//driver.navigate().to("https://ag050484:Cerner06@associates.sandboxcerner.com/accounts/login?returnTo=https%3A%2F%2Fcsd.devcernerops.net%2Fauth%2Fopenid%2Flogin%2Fcomplete%3Freferer%3D%252Flogin");
@@ -65,8 +67,8 @@ public class CSDHomePageTest extends TestBase {
 
 	}
 
-	@AfterMethod
+	@AfterTest
 	public void teardown() {
-		driver.quit();
+		//driver.quit();
 	}
 }
