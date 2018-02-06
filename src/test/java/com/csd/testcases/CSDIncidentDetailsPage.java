@@ -7,7 +7,7 @@ Then I see all Messages sent from that Incident to any of my Subscription's Cont
  * 
  */
 
-package com.csd;
+package com.csd.testcases;
 
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;

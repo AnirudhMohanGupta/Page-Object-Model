@@ -8,7 +8,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.csd.util.TestUtil;
 
@@ -35,10 +37,16 @@ public class TestBase {
 
 		if(browserName.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver","C:/Selenium/chromedriver_win32/chromedriver.exe");
-			driver=new ChromeDriver();
+			//driver=new ChromeDriver();
+			
+			DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+		    ChromeOptions options = new ChromeOptions();
+		    options.addArguments("disable-notifications");
+		    capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+		    driver = new ChromeDriver();
 		}
 		else if (browserName.equals("firefox")) {
-			System.setProperty("webdriver.gecko.driver","C:/Selenium/geckodriver-v0.13.0-win64/geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver","C:/Selenium/geckodriver-v0.19.1-win64/geckodriver.exe");
 			driver=new FirefoxDriver();
 
 		}

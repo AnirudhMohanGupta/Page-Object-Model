@@ -9,6 +9,11 @@
 	<test name="CSD Automation Test Cases">
 		<classes>
 			<class name="com.csd.AssociateLoginPageTest" />
+			<class name="com.csd.CSDHomePageTest" />
+			<class name="com.csd.CSDContractsPageTest" />
+			<class name="com.csd.CSDIncidentContractPageTest" />
+			<class name="com.csd.CSDIncidentDetailsPage" />
+			<class name="com.csd.CSDPreferencesPageTest" />
 		</classes>
 	</test>
 

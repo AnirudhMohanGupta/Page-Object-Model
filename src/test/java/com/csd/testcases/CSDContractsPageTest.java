@@ -1,4 +1,4 @@
-package com.csd;
+package com.csd.testcases;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
