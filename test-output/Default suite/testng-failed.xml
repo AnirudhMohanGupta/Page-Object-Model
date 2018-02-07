@@ -3,15 +3,13 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.csd.CSDHomePageTest">
+      <class name="com.csd.testcases.AssociateLoginPageTest">
         <methods>
-          <include name="verifyLogoutBtnExist"/>
-          <include name="verifyPreferencesBtnExist"/>
           <include name="teardown"/>
-          <include name="verifyHomePageTitleTest"/>
+          <include name="loginTest"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.csd.CSDHomePageTest -->
+      </class> <!-- com.csd.testcases.AssociateLoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -7,6 +7,8 @@
 
 package com.csd.testcases;
 
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -41,6 +43,11 @@ public class CSDIncidentContractPageTest extends TestBase {
 		incidentDetailsPage =new IncidentDetailsPage();
 		incidentsContractsListPage =new IncidentsContractsListPage();
 		provider.selectAssociateProvider();
+
+		Actions make  = new Actions(driver);
+		
+		make.sendKeys(Keys.ENTER);
+		
 		//driver.get("https://ag050484:Cerner06@associates.sandboxcerner.com/accounts/login?returnTo=https%3A%2F%2Fcsd.devcernerops.net%2Fauth%2Fopenid%2Flogin%2Fcomplete%3Freferer%3D%252Flogin");
 		homePage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
 		incidentsPage = homePage.clickOnIncidentsLink();

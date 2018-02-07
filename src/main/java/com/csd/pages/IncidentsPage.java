@@ -96,7 +96,7 @@ public class IncidentsPage extends TestBase {
 
 		for (int i = 0; i < list.size(); i++) {
 			System.out.println(list.get(i).getAttribute("value"));
-			if(list.get(i).getAttribute("value").contains("CAH_TEST")){
+			if(list.get(i).getAttribute("value").contains(contractName)){
 				Actions action =new Actions(driver);
 				action.moveToElement(list.get(i)).click().perform();
 				break;

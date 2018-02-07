@@ -37,17 +37,17 @@ public class CSDNewIncidentPageTest extends TestBase {
 	}
 	
 	@DataProvider
-	
-	public void getCSDTestData(){
+	public Object[][] getCSDTestData(){
 		Object data [][] = TestUtil.getTestData(sheetName);
+		return data;
 		
 	}
 	
-	@Test
-	public void addNewIncidentTest(){
+	@Test(priority=1,dataProvider="getCSDTestData")
+	public void validateCreateNewIncidentTest(String IncName ,String contractName){
 		
 		incidentsPage.clickonNewIncidentBtn();
-		incidentsPage.createNewIncident("LDAP is Down:This is a Test Incident", "TEST");
+		incidentsPage.createNewIncident(IncName,contractName);
 		
 	}
 	

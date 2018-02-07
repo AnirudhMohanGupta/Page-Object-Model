@@ -28,14 +28,14 @@ public class CSDHomePageTest extends TestBase {
 		super();
 	}
 
-	@BeforeTest
+	@BeforeMethod
 	public void setup() throws IOException {
 		intialization();
 		provider = new SelectAProvider();
 		loginpage = new AssociateLoginPage();
 		provider.selectAssociateProvider();
 		
-		Runtime.getRuntime().exec("C:/Users/AG050484/Desktop/HandleAuthenticationWindow.exe");
+		//Runtime.getRuntime().exec("C:/Users/AG050484/Desktop/HandleAuthenticationWindow.exe");
 		
 
 		//driver.navigate().to("https://ag050484:Cerner06@associates.sandboxcerner.com/accounts/login?returnTo=https%3A%2F%2Fcsd.devcernerops.net%2Fauth%2Fopenid%2Flogin%2Fcomplete%3Freferer%3D%252Flogin");
@@ -67,8 +67,8 @@ public class CSDHomePageTest extends TestBase {
 
 	}
 
-	@AfterTest
+	@AfterMethod
 	public void teardown() {
-		//driver.quit();
+		driver.quit();
 	}
 }

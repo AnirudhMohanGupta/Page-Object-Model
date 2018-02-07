@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="FirstTestSuite" verbose="1">
+<suite name="RegressionTestSuite" verbose="1">
 
 	<listeners>
 		<listener class-name="com.csd.ExtentReportListener.ExtentReportNG" />
@@ -8,12 +8,12 @@
 
 	<test name="CSD Automation Test Cases">
 		<classes>
-			<class name="com.csd.AssociateLoginPageTest" />
-			<class name="com.csd.CSDHomePageTest" />
-			<class name="com.csd.CSDContractsPageTest" />
-			<class name="com.csd.CSDIncidentContractPageTest" />
-			<class name="com.csd.CSDIncidentDetailsPage" />
-			<class name="com.csd.CSDPreferencesPageTest" />
+			<class name="com.csd.testcases.AssociateLoginPageTest" />
+			<class name="com.csd.testcases.CSDHomePageTest" />
+			<class name="com.csd.testcases.CSDContractsPageTest" />
+			<class name="com.csd.testcases.CSDIncidentContractPageTest" />
+			<class name="com.csd.testcases.CSDIncidentDetailsPage" />
+			<class name="com.csd.testcasesCSDPreferencesPageTest" />
 		</classes>
 	</test>
 
