@@ -8,12 +8,9 @@
 
 	<test name="CSD Automation Test Cases">
 		<classes>
-			<class name="com.csd.testcases.AssociateLoginPageTest" />
-			<class name="com.csd.testcases.CSDHomePageTest" />
-			<class name="com.csd.testcases.CSDContractsPageTest" />
-			<class name="com.csd.testcases.CSDIncidentContractPageTest" />
-			<class name="com.csd.testcases.CSDIncidentDetailsPage" />
-			<class name="com.csd.testcasesCSDPreferencesPageTest" />
+			
+			<class name="com.csd.testcases.FirstTenHotels.java" />
+			
 		</classes>
 	</test>
 

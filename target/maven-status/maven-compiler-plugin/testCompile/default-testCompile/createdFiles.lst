@@ -1,0 +1,9 @@
+com\csd\testcases\CSDCreateNewEventPageTest.class
+com\csd\testcases\CSDPreferencesPageTest.class
+com\csd\testcases\CSDIncidentContractPageTest.class
+com\csd\testcases\AssociateLoginPageTest.class
+com\csd\testcases\CSDNewEventBlankFormTest.class
+com\csd\testcases\CSDContractsPageTest.class
+com\csd\testcases\CSDNewIncidentPageTest.class
+com\csd\testcases\CSDIncidentDetailsPage.class
+com\csd\testcases\CSDHomePageTest.class

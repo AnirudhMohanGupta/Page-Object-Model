@@ -18,7 +18,7 @@ import com.csd.base.TestBase;
 public class TestUtil extends TestBase  {
 
 	public static long PAGE_LOAD_TIMEOUT =20;
-	public static long IMPLICIT_WAIT =15;
+	public static long IMPLICIT_WAIT =20;
 	
 	static Workbook book;
 	static Sheet sheet;

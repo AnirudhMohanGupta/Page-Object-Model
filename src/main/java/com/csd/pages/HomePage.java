@@ -1,5 +1,11 @@
 package com.csd.pages;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -9,32 +15,41 @@ import com.csd.base.TestBase;
 public class HomePage extends TestBase {
 
 	//Page-Factory -OR:
-	@FindBy(xpath="//a[contains (text(),'Preferences')]")
-	WebElement PreferencesBtn;
+	@FindBy(xpath=".//*[@id='qf-0q-destination']")
+	WebElement DestinationField;
 
-	@FindBy(xpath="//a[contains (text(),'Log Out')]")
-	WebElement LogOutBtn;
+	@FindBy(xpath=".//*[@id='qf-0q-localised-check-in']")
+	WebElement CheckInDateField;
 
-	@FindBy(xpath="//a[contains (text(),'Clients')]")
-	WebElement ClientsBtn;
+	@FindBy(xpath=".//*[@id='qf-0q-localised-check-out']")
+	WebElement CheckOutDateField;
 
-	@FindBy(xpath="//a[contains (text(),'Services')]")
-	WebElement ServicesBtn;
+	@FindBy(xpath=".//*[@id='widget-query-label-1']")
+	WebElement CheckInDateWidget;
 
-	@FindBy(xpath="//a[contains (text(),'Contracts')]")
+	@FindBy(xpath=".//*[@id='widget-query-label-3']")
 	WebElement ContractsBtn;
 
-	@FindBy(xpath="//a[contains (text(),'Events')]")
-	WebElement EventsBtn;
+	@FindBy(xpath="//div[2]/div/button[2]")
+	WebElement NextMonthBtn;
 
-	@FindBy(xpath="//a[contains (text(),'Incidents')]")
-	WebElement IncidentsBtn;
+	@FindBy(xpath="//button[@class='widget-overlay-close']")
+	WebElement CloseBtn;
+
+	@FindBy(xpath="//button[contains(text(),'Search')]")
+	WebElement SearchBtn;
 
 	@FindBy(xpath="//a[contains (text(),'Tags')]")
 	WebElement TagsBtn;
 
 	@FindBy(xpath="//th[contains (text(),'Event')]")
 	WebElement EventColumn;
+
+	@FindBy(xpath="//a[contains(text(),'1')]")
+	WebElement DateSelection;
+	
+	@FindBy(xpath="//div[@class='autosuggest-category-result']")
+	List<WebElement> results;
 
 	//Initializing the page objects
 	public HomePage(){
@@ -47,48 +62,66 @@ public class HomePage extends TestBase {
 		return driver.getTitle();
 
 	}
-	
-	public boolean verifyLogOutBtnisDisplayed(){
-		return LogOutBtn.isDisplayed();
-	}
-	
-	public boolean verifyPreferencesBtnisDisplayed(){
-		return PreferencesBtn.isDisplayed();
-	}
-	
-	public PreferencesClients clickOnPreferencesLink() {
-		PreferencesBtn.click();
-		return new PreferencesClients();		
-	}
-	
-	public ClientsPage clickOnClientsLink() {
-		ClientsBtn.click();
-		return new ClientsPage();		
+
+	public void setBangaloreonDestinationField() throws InterruptedException {
+
+		String searchingText = "Bengaluru, India";
+		String partialText = "Bengaluru";
+
+		DestinationField.sendKeys(partialText);
+		Thread.sleep(3000);
+		int size = results.size();
+
+		System.out.println("The size of the list is: " + size);
+
+		for (int i = 0; i < size; i++) {
+			System.out.println(results.get(i).getText());
+		}
+
+		//Thread.sleep(3000);
+		for (WebElement result : results) {
+			if (result.getText().equals(searchingText)) {
+				result.click();
+				System.out.println("Selected: " + result.getText());
+				break;
+			}
+		}
+
 	}
 
-	public ServicesPage clickOnServicesLink() {
-		ServicesBtn.click();
-		return new ServicesPage();		
-	}
+	public void setDate3MonthsfromCurrentDate() throws InterruptedException{
+		String selectdate= "07/01/2018";
+		Date d =new Date(selectdate);
+		SimpleDateFormat dt = new SimpleDateFormat("MMMM/dd/yyyy");
+		String date=dt.format(d);
+		System.out.println(date);
+		String[] split = date.split("/");
+		System.out.println(split[0]+" "+split[1]+" "+split[2]);
 
-	public ContractsPage clickOnContractsLink() {
-		ContractsBtn.click();
-		return new ContractsPage();		
-	}
+		String Month =split[0]+" "+split[2];
+		System.out.println("month--------"+Month);
 
-	public EventsPage clickOnEventsLink() {
-		EventsBtn.click();
-		return new EventsPage();		
-	}
+		CheckInDateWidget.click();
 
-	public IncidentsPage clickOnIncidentsLink() {
-		IncidentsBtn.click();
-		return new IncidentsPage();		
-	}
+		Thread.sleep(2000);
+		//*[contains(text(),'May 2018')]
 
-	public TagsPage clickOnTagsLink() {
-		TagsBtn.click();
-		return new TagsPage();		
-	}
+		while(true){
 
+			try {
+				driver.findElement(By.xpath("//*[contains(text(),'"+Month+"')]")).isDisplayed();
+				Thread.sleep(2000);
+				DateSelection.click();
+				SearchBtn.click();
+				break;
+
+			} catch (Exception e) {
+				// TODO: handle exception
+				NextMonthBtn.click();
+				Thread.sleep(2000);
+			}
+		}
+	}
 }
+
+
